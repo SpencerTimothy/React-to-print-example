@@ -30,6 +30,21 @@ body {
   overflow-x: hidden;
 }
 
+a.download {
+  text-decoration: none;
+  display: contents;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: var(--color-secondary);
+  transition: all .3s;
+}
+
 .print-resume {
   background: var(--color-primary);
   border: 1px solid var(--color-light-blue);
@@ -58,7 +73,8 @@ body {
 
 div.light h2,
 div.light b,
-div.light h4 {
+div.light h4,
+div.light .contact a {
   color: black;
 }
 
@@ -79,7 +95,8 @@ div.light .map-icon {
 
 .my-resume {
   margin: 5rem auto;
-  width: 65%;
+  width: 60rem;
+  /* width: 60%; */
   max-width: 65rem;
   background-color: var(--color-purple);
   border-radius: 5px;
@@ -91,18 +108,28 @@ div.light .map-icon {
   border-top: 5px solid var(--color-secondary);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding: 2.5rem 1rem;
+  padding: 1.5rem 1rem;
+  /* padding: auto; */
   display: grid;
   position: relative;
 }
 
-h1 {
+.my-resume h1 {
   font-size: 4rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
 
-h2 {
+.my-resume h3 {
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  padding-left: 11.5rem;
+  padding-bottom: .5rem;
+  letter-spacing: 2px;
+}
+
+.my-resume h2 {
   font-family: consolas, monospace;
   border-bottom: 1px dashed var(--color-light-blue);
   padding: .5rem 0 .5rem 0;
@@ -141,7 +168,8 @@ li>b {
 }
 
 .location {
-  margin: 0 0 0 .5rem;
+  /* margin: 0 0 0 .5rem; */
+  padding: 0 0 0 5rem;
 }
 
 .map-icon {
@@ -151,7 +179,7 @@ li>b {
   vertical-align: middle;
 }
 
-h4 {
+.my-resume h4 {
   color: var(--color-light-grey);
   display: inline-block;
 }
@@ -181,6 +209,10 @@ time {
   padding: 0 .25rem;
 }
 
+.projects>p {
+  margin: 0 0 .5rem 0;
+}
+
 .relavent-skills>div {
   background-color: var(--color-medium-blue);
   display: inline-flex;
@@ -205,11 +237,15 @@ time {
     font-size: .9rem;
   }
 
-  h1 {
+  .my-resume h1 {
     font-size: 3.5rem;
   }
 
-  h4 {
+  .my-resume h3 {
+    padding-left: 9.5rem
+  }
+
+  .my-resume h4 {
     font-size: .9rem;
   }
 
@@ -223,19 +259,45 @@ time {
 }
 
 @media screen and (max-width: 1150px) {
-  h1 {
+  .name-contact {
+    padding: 1.6rem 1rem;
+  }
+
+  .my-resume h1 {
     font-size: 2.75rem;
+  }
+
+  .my-resume h3 {
+    font-size: 1.15rem;
+    padding-left: 7rem;
+    padding-bottom: .2rem;
+  }
+
+  .location {
+    padding-left: 1.5rem;
+  }
+
+  .contact {
+    padding-top: 0rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  h1 {
+  .my-resume h1 {
     font-size: 3rem;
+  }
+
+  .my-resume h3 {
+    padding-left: 7.75rem;
   }
 
   .my-resume {
     margin: 4rem auto;
     width: 80%;
+  }
+
+  .name-contact ul {
+    padding-top: .25rem;
   }
 }
 
@@ -254,8 +316,12 @@ time {
     margin: 3rem auto;
   }
 
-  h1 {
+  .my-resume h1 {
     font-size: 2.5rem;
+  }
+
+  .my-resume h3 {
+    padding: 0;
   }
 
   .contact>ul {
@@ -291,11 +357,13 @@ time {
     padding: 0 0 .25rem 0;
   }
 
-  h1 {
+  .my-resume h1 {
     font-size: 2.45rem;
   }
 
-  /* .contact>ul {} */
+  .location {
+    padding-left: 0;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -303,7 +371,7 @@ time {
     font-size: 14px;
   }
 
-  h1 {
+  .my-resume h1 {
     font-size: 2.25rem;
   }
 
@@ -324,15 +392,27 @@ time {
 
   @page {
     margin: 0;
-    padding: 0;
   }
 
+  header {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
 
   button {
     display: none;
   }
 
+  footer {
+    display: none;
+  }
 
+  a {
+    color: black;
+  }
   .my-resume {
     width: auto;
     /* max-width: 100%; */
@@ -344,7 +424,20 @@ time {
     border-radius: none;
   }
 
-  h4,
+  .contact {
+    padding-top: 4pt;
+  }
+
+  .name-contact h3 {
+    padding: 0 0 2pt 114pt;
+  }
+
+  .contact>ul {
+    line-height: 22pt;
+    padding-top: 0;
+  }
+
+  .my-resume h4,
   .education>h2,
   .projects>h2,
   .relavent-skills>h2,
@@ -353,8 +446,8 @@ time {
     color: black
   }
 
-  h1 {
-    font-size: 36pt;
+  .my-resume h1 {
+    font-size: 42pt;
   }
 
   .name-contact {
