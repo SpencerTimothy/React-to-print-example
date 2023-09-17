@@ -111,6 +111,7 @@ div.light .map-icon {
   padding: 1.5rem 1rem;
   /* padding: auto; */
   display: grid;
+  grid-template-columns: 60% auto auto;
   position: relative;
 }
 
@@ -124,7 +125,7 @@ div.light .map-icon {
   font-size: 1.25rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
-  padding-left: 11.5rem;
+  /* padding-left: 11.5rem; */
   padding-bottom: .5rem;
   letter-spacing: 2px;
 }
@@ -142,6 +143,11 @@ div.light .map-icon {
 .work-experience>h2,
 b {
   color: var(--color-light-grey);
+}
+
+.name {
+  /* left: 0; */
+  text-align: center;
 }
 
 .contact {
@@ -169,7 +175,7 @@ li>b {
 
 .location {
   /* margin: 0 0 0 .5rem; */
-  padding: 0 0 0 5rem;
+  /* padding: 0 0 0 5rem; */
 }
 
 .map-icon {
@@ -242,7 +248,7 @@ time {
   }
 
   .my-resume h3 {
-    padding-left: 9.5rem
+    /* padding-left: 9.5rem */
   }
 
   .my-resume h4 {
@@ -260,35 +266,35 @@ time {
 
 @media screen and (max-width: 1150px) {
   .name-contact {
-    padding: 1.6rem 1rem;
+    /* padding: 1.6rem 1rem; */
   }
 
   .my-resume h1 {
-    font-size: 2.75rem;
+    /* font-size: 2.75rem; */
   }
 
   .my-resume h3 {
     font-size: 1.15rem;
-    padding-left: 7rem;
+    /* padding-left: 7rem; */
     padding-bottom: .2rem;
   }
 
   .location {
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
   }
 
   .contact {
-    padding-top: 0rem;
+    padding-top: 0.5rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .my-resume h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 
   .my-resume h3 {
-    padding-left: 7.75rem;
+    /* padding-left: 7.75rem; */
   }
 
   .my-resume {
@@ -297,8 +303,13 @@ time {
   }
 
   .name-contact ul {
-    padding-top: .25rem;
+    /* padding-top: .25rem; */
   }
+
+  .contact {
+    padding-top: 0;
+  }
+
 }
 
 @media screen and (max-width: 870px) {
@@ -424,12 +435,12 @@ time {
     border-radius: none;
   }
 
-  .contact {
-    padding-top: 4pt;
+  .name {
+    grid-column-start: 0;
   }
 
-  .name-contact h3 {
-    padding: 0 0 2pt 114pt;
+  .contact {
+    padding-top: 4pt;
   }
 
   .contact>ul {

@@ -12,22 +12,24 @@ const ResumeText = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className="my-resume">
       <div className="name-contact">
-        <h1>Spencer Timothy</h1>
-        <h3>Data Analyst</h3>
-        <div className="location">
-          <HiLocationMarker className="map-icon" />
-          <h4>Salt Lake City, Utah / Valencia, Spain</h4>
+         <div className="name">
+          <h1>Spencer Timothy</h1>
+          <h3>Data Analyst</h3>
+          <div className="location">
+            <HiLocationMarker className="map-icon" />
+            <h4>Salt Lake City, Utah</h4>
+          </div>
         </div>
         <div className="contact">
           <ul>
             <li>
               <IoLogoWhatsapp className="resume-icons" />
-              <b>WhatsApp</b>:{" "}
+              <b>Phone</b>:{" "}
               <a
-                href="https://wa.me/34625017274?text=Hello%2C%20we%27re%20interested%20in%20your%20resume%21"
+                href="https://wa.me/18087578251?text=Hello%2C%20we%27re%20interested%20in%20your%20resume%21"
                 target="_blank"
               >
-                +34 625 017 274
+                (808) 757-8251
               </a>
             </li>
             <li>
@@ -103,19 +105,22 @@ const ResumeText = React.forwardRef((props, ref) => {
       <div className="relavent-skills">
         <h2>Relavent Skills</h2>
         <div>Python</div>
-        <div>SQL</div>
+        <div>SQL Server</div>
         <div>Tableau</div>
-        <div>JavaScript</div>
+        {/* <div>JavaScript</div>
         <div>React.js</div>
         <div>CSS</div>
-        <div>HTML</div>
+        <div>HTML</div> */}
         <div>Microsoft Excel</div>
+        <div>Macros</div>
+        <div>VBA</div>
         <div>Google Sheets</div>
+        <div>Apps Script</div>
       </div>
       <div className="work-experience">
         <h2>Work Experience</h2>
         <b>Education Ministry, Spain:</b>
-        <time className="time">Oct. 2020 - Pres.</time>
+        <time className="time">Oct. 2020 - Jun. 2023</time>
         <p>ESL Teacher</p>
         <ul>
           <li>
@@ -129,7 +134,7 @@ const ResumeText = React.forwardRef((props, ref) => {
           </li>
         </ul>
         <b>VIPKid/Gogokid:</b>
-        <time>Mar. 2021 - Oct. 2022</time>
+        <time>Nov. 2020 - Oct. 2022</time>
         <p>Remote ESL Teacher</p>
         <ul>
           <li>
